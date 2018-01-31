@@ -34,10 +34,18 @@ int main(int argc, char* argv[]) {
 	printf("v4->x: %f, v4->y: %f\n", GetX(v4), GetY(v4));
 	printf("Magnitude of v4: %f\n", Magnitude(v4));
 
+        Vector v5 = CreateVector(5.0, 10.0);
+        Vector v6 = CreateVector(5.0, 10.0);
+        Rotate(v6, (PI/2.0));
+
+        printf("Angle between v5 and v5 rotated: %f\n", AngleBetween(v5, v6));
+
 	DestroyVector(v);
 	DestroyVector(v2);
 	DestroyVector(v3);
 	DestroyVector(v4);
+        DestroyVector(v5);
+        DestroyVector(v6);
 
 	return 0;
 }
