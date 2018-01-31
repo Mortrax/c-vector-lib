@@ -81,8 +81,9 @@ extern double SquaredMagnitude(const Vector v) {
 
 //Various other utility functions
 extern double DotProduct(const Vector v1, const Vector v2) {
-	double result = Magnitude(v1) * Magnitude(v2) * cos(AngleBetween(v1, v2));
-	return result;
+	double x_product = v1->x * v2->x;
+        double y_product = v1->y * v2->y;
+	return x_product + y_product;
 }
 
 extern double Distance(const Vector v1, const Vector v2) {
